@@ -14,18 +14,28 @@
 <!-------------------------------------------------------------------------------------------------------------->
         <div class="nav-bar"> 
             <div class="title">Y A W Y E</div>
-            <div class="nav home">Home</div>
-            <div class="nav goals"><a>Goals</a></div>
-            <div class="nav progress"><a>Progress</a></div>
-            <div class="nav articles"><a>Recipes</a></div>
-            <div class="nav aboutUs"><a>About Us</a></div>
-        </div>    
+            <a class="nav home" href="main.html">Home</a>
+            <a class="nav goals" href="goals.html">Goals</a>
+            <a class="nav progress" href="progress.html">Progress</a>
+            <a class="nav recipes" href="recipes.html">Recipes</a>
+            <a class="nav aboutUs" href="aboutus.html">About Us</a>
+        </div>
 <!-------------------------------------------------------------------------------------------------------------->
         <div class="userContent">
 
          <!--after food details are entered, they appear as a box on the left side(handled in script)-->      
         <div class="foodList" id="foodList">
-            </div>
+            <table class="excerTable">
+                <thead>
+                    <tr>
+                      <th scope="col">Excercise Type</th>
+                      <th scope="col">Duration (mins)</th>
+                      <th scope="col">Calories Burnt</th>
+                      <th scope="col"> Delete</th>
+                    </tr>
+                  </thead>
+            </table>
+        </div>
             <div class="chartSection">
 
                 <svg class="caloriesRing" display=> 
@@ -55,27 +65,27 @@
 
                 <div class="foodLogInput">
                     <label for="foodName">Name: </label>
-                    <input class="foodInput" type="text" id="foodName" name="foodName"/>
+                    <input  class="foodInput" type="text" id="foodName" name="foodName"/>
                 </div>
 
                 <div class="foodLogInput inputCals">
                     <label for="inputCals">Calories: </label>
-                    <input class="foodInput" type="number" id="inputCals" name="inputCals"/>
+                    <input class="foodInput" type="number" min="1" id="inputCals" name="inputCals"/>
                 </div>
 
                 <div class="foodLogInput inputProt">
                     <label for="inputProt">Protein: </label>
-                    <input class="foodInput" type="number" id="inputProt" name="inputProt"/>
+                    <input class="foodInput" type="number" min="1" id="inputProt" name="inputProt"/>
                 </div>
 
                 <div class="foodLogInput inputFats">
                     <label for="inputFats">Fats: </label>
-                    <input  class="foodInput" type="number" id="inputFats" name="inputFats"/>
+                    <input  class="foodInput" type="number" min="1" id="inputFats" name="inputFats"/>
                 </div>
 
                 <div class="foodLogInput inputCarbs">
                     <label for="inputCarbs">Carbs: </label>
-                    <input class="foodInput" type="number" id="inputCarbs" name="inputCarbs"/>
+                    <input class="foodInput" type="number" min="1" id="inputCarbs" name="inputCarbs"/>
                 </div>
                 <button class="foodLogButtons add">Add</button>
             </div>
@@ -101,14 +111,15 @@
 
                     <div class="excerLogInput excerDuration">
                         <label for="excerDuration">Duration (minutes):</label>
-                        <input class="excerduration" type="number">
+                        <input class="excerDurationInput" type="number" min="1">
                     </div>
                 <button class="excerLogButtons add">Add</button>
         </div>
-
+        
     </div>
 <!-------------------------------------------------------------------------------------------------------------->
     <script type=text/javascript src="https://www.gstatic.com/charts/loader.js"></script>
     <script src="./main.js" charset="UTF-8"></script>
+    <script src="./survey.js" charset="UTF-8"></script>
 </body>
 </html>
